@@ -1,0 +1,324 @@
+
+/* =========================
+   Global
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  min-height: 100vh;
+  color: #222;
+}
+
+/* =========================
+   Main App
+========================= */
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* =========================
+   Header
+========================= */
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   Search
+========================= */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-container input {
+  width: 350px;
+  padding: 13px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-container button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #1976d2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-container button:hover {
+  background: #125aa0;
+}
+
+/* =========================
+   Loading & Error
+========================= */
+
+.loading {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin: 20px;
+}
+
+.error {
+  text-align: center;
+  color: #b00020;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Weather Card
+========================= */
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.weather-card h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.weather-card .temperature {
+  font-size: 55px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.weather-card .description {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.weather-details div {
+  background: #f3f6fa;
+  padding: 15px;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.weather-details strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   Favorite Button
+========================= */
+
+.favorite-button {
+  margin-top: 20px;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #e91e63;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.favorite-button:hover {
+  background: #c2185b;
+}
+
+/* =========================
+   Forecast
+========================= */
+
+.forecast {
+  margin-top: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.forecast h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.forecast-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.forecast-card {
+  min-width: 140px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f3f6fa;
+  text-align: center;
+}
+
+.forecast-card img {
+  width: 70px;
+}
+
+.forecast-date {
+  font-weight: bold;
+}
+
+.forecast-card h2 {
+  margin: 5px 0;
+}
+
+.forecast-card p:last-child {
+  text-transform: capitalize;
+}
+
+/* =========================
+   History & Favorites
+========================= */
+
+.history,
+.favorites {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.history h3,
+.favorites h3 {
+  margin-top: 0;
+}
+
+.history ul,
+.favorites ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history li,
+.favorites li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background: #f3f6fa;
+  border-radius: 8px;
+}
+
+/* =========================
+   History / Favorite Buttons
+========================= */
+
+.history button,
+.favorites button {
+  border: none;
+  border-radius: 6px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.history button:hover,
+.favorites button:hover {
+  opacity: 0.8;
+}
+
+.clear-history {
+  background: #d32f2f;
+  color: white;
+  margin-top: 10px;
+}
+
+.delete-favorite {
+  background: #e91e63;
+  color: white;
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width: 600px) {
+
+  .app {
+    padding: 20px 12px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  .search-container button {
+    width: 100%;
+  }
+
+  .weather-card {
+    padding: 20px 15px;
+  }
+
+  .weather-card .temperature {
+    font-size: 45px;
+  }
+
+  .weather-details {
+    flex-direction: column;
+  }
+
+  .forecast-card {
+    min-width: 125px;
+  }
+
+  .history li,
+  .favorites li {
+    gap: 10px;
+  }
+}
