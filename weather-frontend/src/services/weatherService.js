@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-const WEATHER_API_URL = "http://localhost:8080/api/weather";
-const HISTORY_API_URL = "http://localhost:8080/api/history";
-const FAVORITES_API_URL = "http://localhost:8080/api/favorites";
-const FORECAST_API_URL = "http://localhost:8080/api/forecast";
-const AUTH_API_URL = "http://localhost:8080/api/auth";
+const API_URL = "https://weather-app-xhmu.onrender.com";
+
+const WEATHER_API_URL = `${API_URL}/api/weather`;
+const HISTORY_API_URL = `${API_URL}/api/history`;
+const FAVORITES_API_URL = `${API_URL}/api/favorites`;
+const FORECAST_API_URL = `${API_URL}/api/forecast`;
+const AUTH_API_URL = `${API_URL}/api/auth`;
 
 export const getWeatherByCity = async (city) => {
   const response = await axios.get(
