@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/favorites")
-@CrossOrigin(origins = "http://localhost:5173")
 public class FavoriteCityController {
 
     private final FavoriteCityRepository favoriteCityRepository;

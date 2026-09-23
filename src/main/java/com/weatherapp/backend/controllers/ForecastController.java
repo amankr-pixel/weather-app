@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/forecast")
-@CrossOrigin(origins = "http://localhost:5173")
 public class ForecastController {
 
     private final ForecastService forecastService;

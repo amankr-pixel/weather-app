@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.security.core.Authentication;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
 public class WeatherController {
 
     private final WeatherService weatherService;
